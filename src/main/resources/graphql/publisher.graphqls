@@ -1,0 +1,32 @@
+extend type Query {
+    """
+    Returns all the registered publishers. When there are any,
+    it returns empty array.
+    """
+    allPublishers: [Publisher]!
+
+    """
+    Returns publisher by the given ID. When no such book is found,
+    it returns null.
+    """
+    publisherById(id: ID!): Publisher
+}
+
+type Publisher {
+    id: ID!
+
+    """Name of the publisher organisation"""
+    name: String!
+
+    """Address of the publisher"""
+    address: String!
+
+    """Telephone number of the publisher"""
+    telephone: String!
+
+    """All the books published by this one"""
+    books: [Book]!
+
+    """Number of books being published here"""
+    numberOfBooks: Int!
+}

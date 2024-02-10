@@ -1,0 +1,32 @@
+extend type Query {
+    """
+    Returns all the registered books. When there are any,
+    it returns empty array.
+    """
+    allBooks: [Book]!
+
+    """
+    Returns book by the given ID. When no such book is found,
+    it returns null.
+    """
+    bookById(id: ID!): Book
+}
+
+type Book {
+    id: ID!
+
+    """Title of the book"""
+    title: String!
+
+    """Year of publishing"""
+    year: Int!
+
+    """List of authors of the book"""
+    authors: [Author!]!
+
+    """Publisher of the book"""
+    publisher: Publisher!
+
+    """Book's authors count"""
+    numberOfAuthors: Int!
+}

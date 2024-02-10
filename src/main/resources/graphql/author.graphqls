@@ -1,0 +1,38 @@
+extend type Query {
+    """
+    Returns all the registered authors. When there are any,
+    it returns empty array.
+    """
+    allAuthors: [Author]!
+
+    """
+    Returns author by the given ID. When no such author is found,
+    it returns null.
+    """
+    authorById(id: ID!): Author
+}
+
+type Author {
+    id: ID!
+
+    """First name of the author"""
+    firstName: String!
+
+    """Last name of the author"""
+    lastName: String!
+
+    """Full name of the author"""
+    fullName: String!
+
+    """Birth year of the author"""
+    birthYear: Int!
+
+    """Current age of the autor"""
+    age: Int!
+
+    """Books the author published"""
+    books: [Book!]!
+
+    """Number of books the author has published"""
+    numberOfBooks: Int!
+}

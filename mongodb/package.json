@@ -1,0 +1,11 @@
+{
+  "description": "Mocks creator",
+  "scripts": {
+    "mock": "node index.js"
+  },
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "mongodb": "^6.3.0"
+  }
+}
