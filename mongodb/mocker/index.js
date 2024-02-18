@@ -5,7 +5,7 @@ import {authors} from "./authors.js";
 import {books} from "./books.js";
 import {tags} from "./tags.js";
 
-const url = `mongodb://localhost:27017/`
+const url = `mongodb://mongodb:27017/`
 
 const client = new MongoClient(url, {
     auth: {
@@ -38,6 +38,8 @@ const run = async () => {
     ]);
 
     await client.close()
+
+    console.log("All data populated successfully")
 }
 
 run()
