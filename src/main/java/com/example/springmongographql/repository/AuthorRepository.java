@@ -7,5 +7,8 @@ import java.util.List;
 
 public interface AuthorRepository extends MongoRepository<Author, String> {
 
+    /**
+     * Gets the list of author instances by given list of IDs
+     */
     List<Author> findAllByIdIn(List<String> ids);
 }

@@ -2,8 +2,10 @@ package com.example.springmongographql.controller;
 
 import com.example.springmongographql.model.Author;
 import com.example.springmongographql.model.Book;
+import com.example.springmongographql.model.Tag;
 import com.example.springmongographql.service.AuthorService;
 import com.example.springmongographql.service.BookService;
+import com.example.springmongographql.service.TagService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
@@ -11,6 +13,7 @@ import org.springframework.graphql.data.method.annotation.SchemaMapping;
 import org.springframework.stereotype.Controller;
 
 import java.time.Year;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,6 +23,7 @@ public class AuthorController {
 
     private final AuthorService authorService;
     private final BookService bookService;
+    private final TagService tagService;
 
     /**
      * Resolver for all the authors
@@ -72,5 +76,14 @@ public class AuthorController {
     public Integer populateNumberOfBooks(Author author) {
         System.out.println("Populating author's book count");
         return bookService.getBooksOfAuthor(author.getId()).size();
+    }
+
+    /**
+     * Custom populator of tags
+     */
+    @SchemaMapping(typeName = "Author", field = "tags")
+    public List<Tag> populateTags(Author author) {
+        System.out.println("Populating author's tags");
+        return tagService.getMultipleTags(author.getTagIds());
     }
 }
