@@ -1,14 +1,16 @@
 package com.example.springmongographql.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 @Document
-public class Book {
+public class Book extends Taggable {
 
     @Id
     private String id;
@@ -17,11 +19,4 @@ public class Book {
     private Integer year;
     private String publisherId;
     private List<String> authorIds;
-
-    public Book(String title, Integer year, String publisherId, List<String> authorIds) {
-        this.title = title;
-        this.year = year;
-        this.publisherId = publisherId;
-        this.authorIds = authorIds;
-    }
 }
