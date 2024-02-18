@@ -2,8 +2,10 @@ package com.example.springmongographql.controller;
 
 import com.example.springmongographql.model.Book;
 import com.example.springmongographql.model.Publisher;
+import com.example.springmongographql.model.Tag;
 import com.example.springmongographql.service.BookService;
 import com.example.springmongographql.service.PublisherService;
+import com.example.springmongographql.service.TagService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
@@ -19,6 +21,7 @@ public class PublisherController {
 
     private final PublisherService publisherService;
     private final BookService bookService;
+    private final TagService tagService;
 
     /**
      * Resolver for all the publishers
@@ -52,5 +55,14 @@ public class PublisherController {
     public Integer populateNumberOfBooks(Publisher publisher) {
         System.out.println("Populating publisher's books count");
         return bookService.getBooksOfPublisher(publisher.getId()).size();
+    }
+
+    /**
+     * Custom populator of tags
+     */
+    @SchemaMapping(typeName = "Publisher", field = "tags")
+    public List<Tag> populateTags(Publisher publisher) {
+        System.out.println("Populating publisher's tags");
+        return tagService.getMultipleTags(publisher.getTagIds());
     }
 }

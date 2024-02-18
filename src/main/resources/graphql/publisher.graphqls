@@ -12,7 +12,7 @@ extend type Query {
     publisherById(id: ID!): Publisher
 }
 
-type Publisher {
+type Publisher implements Taggable {
     id: ID!
 
     """Name of the publisher organisation"""
@@ -29,4 +29,7 @@ type Publisher {
 
     """Number of books being published here"""
     numberOfBooks: Int!
+
+    """Tags assigned to the publisher"""
+    tags: [Tag]!
 }

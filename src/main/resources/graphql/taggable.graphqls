@@ -1,0 +1,20 @@
+extend type Query {
+
+    """Returns all the registered tags"""
+    allTags: [Tag]!
+
+    """Tries to find a tag by given ID"""
+    tagById(id: ID!): Tag
+}
+
+"""
+Mutual interface for all the entities that might have tag assigned.
+"""
+interface Taggable {
+    tags: [Tag]!
+}
+
+type Tag {
+    id: ID!
+    name: String!
+}
