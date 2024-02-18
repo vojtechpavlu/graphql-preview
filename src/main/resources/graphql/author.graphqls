@@ -12,7 +12,7 @@ extend type Query {
     authorById(id: ID!): Author
 }
 
-type Author {
+type Author implements Taggable {
     id: ID!
 
     """First name of the author"""
@@ -35,4 +35,7 @@ type Author {
 
     """Number of books the author has published"""
     numberOfBooks: Int!
+
+    """Tags assigned to the author"""
+    tags: [Tag]!
 }
