@@ -4,35 +4,46 @@ export const books = [
         title: "Ekonomie dobra a zla",
         year: 2009,
         publisherId: "8sth84st33ta2ergaerg",
-        authorIds: ["87agrrg8ae1rg52a13"]
+        authorIds: ["87agrrg8ae1rg52a13"],
+        tagIds: ["ergaerg315aer2g185h16s8rj153tu"]
     },
     {
         _id: "fkdfa35g13ae3rg8ae1rg52a13",
         title: "Druhá derivace touhy",
         year: 2018,
         publisherId: "8sth84st33ta2ergaerg",
-        authorIds: ["87agrrg8ae1rg52a13"]
+        authorIds: ["87agrrg8ae1rg52a13"],
+        tagIds: ["ergaerg315aer2g185h16s8rj153tu"]
     },
     {
         _id: "254she13ae3rg8ae1rg52a13",
         title: "Soumrak homo economicus",
         year: 2012,
         publisherId: "8sth84st33ta2ergaerg",
-        authorIds: ["87agrrg8ae1rg52a13"]
+        authorIds: ["87agrrg8ae1rg52a13"],
+        tagIds: ["ergaerg315aer2g185h16s8rj153tu"]
     },
     {
         _id: "adf8a53g51ae1rg2a1r",
         title: "Programování v C++",
         year: 2017,
         publisherId: "asdfag53513sr51h1sthsrth",
-        authorIds: ["aerg8453eagr2aerg"]
+        authorIds: ["aerg8453eagr2aerg"],
+        tagIds: [
+            "kdzkmslrtjhnakjtengae",
+            "d48d5tz4j53d5zjdtjszj"
+        ]
     },
     {
         _id: "sdf8asfa5g12aerg",
         title: "Java - Programování podprocesů",
         year: 2021,
         publisherId: "asdfag53513sr51h1sthsrth",
-        authorIds: ["aerg8453eagr2aerg"]
+        authorIds: ["aerg8453eagr2aerg"],
+        tagIds: [
+            "kdzkmslrtjhnakjtengae",
+            "d48d5tz4j53d5zjdtjszj"
+        ]
     },
     {
         _id: "rga8erg22312gerg",
@@ -59,6 +70,10 @@ export const books = [
         authorIds: [
             "shtzj8srt4h68132",
             "are53arefwe3W2GW0G"
+        ],
+        tagIds: [
+            "kdzkmslrtjhnakjtengae",
+            "d48d5tz4j53d5zjdtjszj"
         ]
     },
     {
@@ -68,6 +83,10 @@ export const books = [
         publisherId: "asdfag53513sr51h1sthsrth",
         authorIds: [
             "are53arefwe3W2GW0G"
+        ],
+        tagIds: [
+            "kdzkmslrtjhnakjtengae",
+            "d48d5tz4j53d5zjdtjszj"
         ]
     },
     {
@@ -77,6 +96,9 @@ export const books = [
         publisherId: "setg8s435t435set5h",
         authorIds: [
             "g8aer8g345aergaerg"
+        ],
+        tagIds: [
+            "asgkjaenkr88a48354sr3jhsrthsrth"
         ]
     },
     {
@@ -87,6 +109,9 @@ export const books = [
         authorIds: [
             "g8aer8g345aergaerg",
             "se8rag4aer35ga13reg2aer"
+        ],
+        tagIds: [
+            "asgkjaenkr88a48354sr3jhsrthsrth"
         ]
     },
     {
@@ -96,6 +121,9 @@ export const books = [
         publisherId: "8ae4ar31we2fWEF5WEF",
         authorIds: [
             "ag84aer35gaerg321a3erg"
+        ],
+        tagIds: [
+            "srklhskmltraergjajetaegerart"
         ]
     },
     {
@@ -105,6 +133,9 @@ export const books = [
         publisherId: "8ae4ar31we2fWEF5WEF",
         authorIds: [
             "ag84aer35gaerg321a3erg"
+        ],
+        tagIds: [
+            "srklhskmltraergjajetaegerart"
         ]
     }
 ]
