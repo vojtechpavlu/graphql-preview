@@ -17,4 +17,13 @@ interface Taggable {
 type Tag {
     id: ID!
     name: String!
+
+    """Books with this tag assigned"""
+    books: [Book]!
+
+    """Publishers with this tag assigned"""
+    publishers: [Publisher]!
+
+    """Authors with this tag assigned"""
+    authors: [Author]!
 }
