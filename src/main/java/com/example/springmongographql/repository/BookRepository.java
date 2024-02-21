@@ -16,4 +16,9 @@ public interface BookRepository extends MongoRepository<Book, String> {
      * Tries to find all the books of the given author
      */
     List<Book> findAllByAuthorIdsContaining(String authorId);
+
+    /**
+     * Tries to find all the books with assigned tag
+     */
+    List<Book> findAllByTagIdsContaining(String tagId);
 }
